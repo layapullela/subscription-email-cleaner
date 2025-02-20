@@ -5,7 +5,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      width: 200px;
+      width: 300px;
       padding: 10px;
     }
     button {
@@ -13,11 +13,31 @@
       padding: 10px;
       margin-top: 10px;
     }
+    #senders-list {
+      margin-top: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .sender-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sender-count {
+      background: #e0e0e0;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
-  <h1>Clean Emails</h1>
-  <button id="clean-emails">Clean Subscription Emails</button>
+  <h1>Email Senders</h1>
+  <div id="status">Please open Gmail to see senders</div>
+  <div id="senders-list"></div>
+  <button id="clean-emails">Clean Selected Senders</button>
   <script src="popup.js"></script>
 </body>
 </html>
